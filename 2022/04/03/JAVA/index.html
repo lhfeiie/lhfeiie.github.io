@@ -10,7 +10,7 @@
   
   <title>
     
-      我的第一篇文章 | Hexo
+      JAVA | Hexo
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -192,7 +192,7 @@
 </header>
 
     <div id="article-banner">
-  <h2>我的第一篇文章</h2>
+  <h2>JAVA</h2>
   <p class="post-date">2022-04-03</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -201,7 +201,23 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"></section>
+    <section class="markdown-content"><h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>calss 类名 {</p>
+<p>​        类体的内容</p>
+<p>}</p>
+<h3 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h3><p>​        类体中的内容分为两部分：一部分是变量的声明，另一部分是方法的定义。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Factory</span> &#123;</span><br><span class="line">    <span class="type">float</span> [] a;<span class="comment">//定义成员变量数组a</span></span><br><span class="line">    Workman zhang;<span class="comment">//zhang是Workman类声明的变量，即对象</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Workman</span>&#123;</span><br><span class="line">    <span class="type">double</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>成员变量在整个类的所有方法里都有效，其有效性与它在类体中出现的位置无关。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><strong>在类中定义的方法其实就是一个函数，只不过在JAVA中称为方法。</strong></p>
+<p><strong>方法与C语言的函数完全相似</strong></p>
+<p>当方法中的局部变量与成员变量的名字相同时，如果想在该方法中使用成员变量，必须使用关键字<strong>this</strong>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Tom</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">10</span>, y;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">f</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">        y = x + <span class="built_in">this</span>.x;<span class="comment">//this.x的值为10,x的值为5</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>成员变量有默认值，但方法中的局部变量没有默认值。</p>
+<p><strong>在定义的类中，只能定义成员变量，不能对成员函数进行操作，要想操作只能在方法中操作。</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">12</span>;<span class="comment">//可以在声明的同时指定初值</span></span><br><span class="line">    <span class="type">float</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">12.56f</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">float</span> b;</span><br><span class="line">    a = <span class="number">12</span>;<span class="comment">//不能声明成员变量后再对成员变量赋值，这种操作只能体现在方法中</span></span><br><span class="line">    b = <span class="number">12.56f</span>;<span class="comment">//非法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</section>
     <!-- Tags START -->
     
     <!-- Tags END -->
@@ -210,10 +226,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-    
-      <a class="nav-right" href="/2022/04/03/C++%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/">
+      <a class="nav-left" href="/2022/04/03/Linux/">
+        <span class="nav-arrow">← </span>
         
-          C++学习笔记
+          Linux
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2022/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+        
+          计算机网络
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -268,7 +291,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="nav">none</ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-nav-text">类与对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%B1%BB"><span class="toc-nav-text">类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="toc-nav-text">成员变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-nav-text">方法</span></a></li></ol></li></ol></li></ol>
     
   </div>
 </aside>
@@ -278,7 +301,7 @@
 
 <script>
   (function () {
-    var url = 'http://example.com/2022/04/03/我的第一篇文章/';
+    var url = 'http://example.com/2022/04/03/JAVA/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({

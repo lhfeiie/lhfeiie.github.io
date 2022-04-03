@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      计算机网络 | Hexo
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Hexo</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>计算机网络</h2>
+  <p class="post-date">2022-04-03</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章 概述"></a>第一章 概述</h1><h2 id="互联网的组成"><a href="#互联网的组成" class="headerlink" title="互联网的组成"></a>互联网的组成</h2><p><strong>边缘部分</strong> 由所有连接在互联网上的主机组成，这部分是用户直接使用的，用来进行通信（传达数据、音频或视频）和资源共享。</p>
+<p>处在互联网边缘的部分就是连接在互联网上的所有主机。这些主机又称为端系统。ISP不仅仅是向端系统提供服务，它也可以拥有一些端系统。</p>
+<p>主机A和主机B进行通信就是指“主机A的某个进程和主机B上的另一个进程进行通信”，“进程”就是“运行着的程序”，也可以简称为“计算机之间通信”。</p>
+<p>再网络边缘的端系统之间的通信方式通常可划分为两大类：客户-服务器方式（C&#x2F;S方式）和对等方式（P2P方式）。</p>
+<h4 id="客户-服务方式"><a href="#客户-服务方式" class="headerlink" title="客户-服务方式"></a>客户-服务方式</h4><p>互联网最常用的也是最传统的方式。</p>
+<p>客户和服务器都是指通信中所涉及的两个应用进程。最主要的特征是：<strong>客户是服务请求方，服务器是服务提供方</strong>。</p>
+<p>客户程序和服务器程序通常还具有以下一些特点》</p>
+<p><strong>客户程序</strong></p>
+<p>1.被用户调用后运行，在通信时主动向远地服务器发起通信（请求服务）。因此，客户程序必须知道服务器程序的地址。</p>
+<p>2.不需要特殊的硬件和很复杂的操作系统。</p>
+<p><strong>服务器程序</strong></p>
+<p>1.是一种专门用来提供某种服务的程序，可同时处理多个远地或本地客户的请求。</p>
+<p>2.系统启动后即自动调用并一直不断地运行着，被动地等待并接受来自各地的客户的通信请求。因此，服务器程序不需要知道客户程序的地址。</p>
+<p>3.一般需要有强大的硬件和高级的操作系统支持。</p>
+<p>客户和服务器都可发送和接收数据。（客户发送请求，接收服务。服务器接收请求，发送服务）。</p>
+<p><strong>客户和服务器本来都指的是计算机进程（软件）。</strong></p>
+<h4 id="对等连接方式"><a href="#对等连接方式" class="headerlink" title="对等连接方式"></a>对等连接方式</h4><p><strong>对等连接</strong>，简写为P2P。</p>
+<p>对等连接工作方式可支持大量对等用户（如上百万个）同时工作。</p>
+<p><strong>核心部分</strong> 由大量网络和连接这些网络的路由器组成。这部分是为边缘部分提供服务的（提供连通性和交换）。</p>
+<p>网络核心部分是互联网中最复杂地部分，因为网络中的核心部分要向网络边缘中的大量主机提供连通性，使边缘部分中的任何一台主机都能够向其他主机通信。</p>
+<p>在网络核心部分起特殊作用的是路由器。路由器是实现分组交换的关键组件，其任务是转发收到的分组，这是网络核心部分最重要的功能。</p>
+<h4 id="电路交换的主要特点"><a href="#电路交换的主要特点" class="headerlink" title="电路交换的主要特点"></a>电路交换的主要特点</h4><p>若N部电话要两两相连，就需要N（N - 1）&#x2F; 2 对电线。</p>
+<p>电话交换机交换的方式一直都是电路交换。</p>
+<p><strong>电路交换的方式：</strong>建立连接（占用通信资源）</p>
+<h1 id="第一章-计算机网络和因特网"><a href="#第一章-计算机网络和因特网" class="headerlink" title="第一章 计算机网络和因特网"></a>第一章 计算机网络和因特网</h1><h2 id="1-1-什么是因特网"><a href="#1-1-什么是因特网" class="headerlink" title="1.1 什么是因特网"></a>1.1 什么是因特网</h2><h3 id="1-1-1-具体构成描述"><a href="#1-1-1-具体构成描述" class="headerlink" title="1.1.1 具体构成描述"></a>1.1.1 具体构成描述</h3><p>端系统通过<strong>通信链路</strong>和<strong>分组交换机</strong>连接到一起。</p>
+<p>分组交换机：路由器（通常用于网络核心中）、链路层交换机（通常用于接入网中）。</p>
+<p>端系统、分组交换机和其他因特网部件都要运行一系列协议，这些协议控制因特网中信息的接受和发送。TCP和IP是因特网中最为重要的协议。</p>
+<p>IP协议定义了在路由器和端系统之间发送和接收的分组格式。因特网的主要协议统称为TCP&#x2F;IP。</p>
+<h3 id="1-1-2-服务描述"><a href="#1-1-2-服务描述" class="headerlink" title="1.1.2 服务描述"></a>1.1.2 服务描述</h3><p>与因特网相连的端系统提供了一个套接字接口，该接口规定了运行在一个端系统上的程序请求因特网基础设施向运行在另一个端系统上的特定目的地程序交付数据的方式。英特网套接字接口是一套发送程序必须遵循的规则集合，因此因特网能够将数据交付给目的地。</p>
+<h3 id="1-1-3-什么是协议"><a href="#1-1-3-什么是协议" class="headerlink" title="1.1.3 什么是协议"></a>1.1.3 什么是协议</h3><p><strong>1. 人类活动的类比</strong></p>
+<p>为了完成一项工作，要求两个（或多个）通信实体运行相同的协议。</p>
+<p><strong>2. 网络协议</strong></p>
+<p><strong>协议</strong> 定义了在两个或多个通信实体之间交换的报文的格式和顺序，以及报文发送和&#x2F;或接受一条报文或其他事件所采取的动作。</p>
+<h2 id="1-2-网络边缘"><a href="#1-2-网络边缘" class="headerlink" title="1.2 网络边缘"></a>1.2 网络边缘</h2><p>端系统处于因特网的边缘。</p>
+<p>主机 &#x3D; 端系统。</p>
+<p>主机分为<strong>客户（通常是桌面PC、移动PC和智能手机等）</strong>和<strong>服务器（通常是更为强大的机器，用于存储和发布Web页面、流视频、中继电子邮件等）</strong>。</p>
+<h3 id="1-2-1-接入网"><a href="#1-2-1-接入网" class="headerlink" title="1.2.1 接入网"></a>1.2.1 接入网</h3><p><strong>接入网：</strong>指将端系统物理连接到其<strong>边缘路由器（端系统到任何其他远程端系统的路径上的第一台路由器）</strong>的网络。</p>
+<p>宽带住宅接入有两种最流行的类型：<strong>数字用户线（DSL）</strong>和电缆。</p>
+<p><strong>光纤到户（FTTH）</strong>是一种提供更高速率的新兴技术。</p>
+<p>两种有竞争性的光纤分布体系结构：<strong>有源光纤网络（AON）和无源光纤网络（PON）。</strong></p>
+<p><strong>无源光纤网络（PON）</strong>：每个家庭具有一个<strong>光纤网络端接器（ONT）</strong>，它把一些家庭集结到一根共享的光纤，该光纤再连接到本地电话和公司的中心局中的<strong>光纤线路端接器（OLT）</strong>。</p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2022/04/03/JAVA/">
+        <span class="nav-arrow">← </span>
+        
+          JAVA
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2022/04/03/C%E8%AF%AD%E8%A8%80/">
+        
+          C语言
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%A6%82%E8%BF%B0"><span class="toc-nav-text">第一章 概述</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-nav-text">互联网的组成</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%A2%E6%88%B7-%E6%9C%8D%E5%8A%A1%E6%96%B9%E5%BC%8F"><span class="toc-nav-text">客户-服务方式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AF%B9%E7%AD%89%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F"><span class="toc-nav-text">对等连接方式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="toc-nav-text">电路交换的主要特点</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%92%8C%E5%9B%A0%E7%89%B9%E7%BD%91"><span class="toc-nav-text">第一章 计算机网络和因特网</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%A0%E7%89%B9%E7%BD%91"><span class="toc-nav-text">1.1 什么是因特网</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-1-%E5%85%B7%E4%BD%93%E6%9E%84%E6%88%90%E6%8F%8F%E8%BF%B0"><span class="toc-nav-text">1.1.1 具体构成描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-2-%E6%9C%8D%E5%8A%A1%E6%8F%8F%E8%BF%B0"><span class="toc-nav-text">1.1.2 服务描述</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-1-3-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%8F%E8%AE%AE"><span class="toc-nav-text">1.1.3 什么是协议</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-2-%E7%BD%91%E7%BB%9C%E8%BE%B9%E7%BC%98"><span class="toc-nav-text">1.2 网络边缘</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-2-1-%E6%8E%A5%E5%85%A5%E7%BD%91"><span class="toc-nav-text">1.2.1 接入网</span></a></li></ol></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2022/04/03/计算机网络/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2022 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
