@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/string%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%95%B0%E7%BB%84%E9%81%8D%E5%8E%86.8e7a4ncvcwo.webp">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E5%BE%AA%E7%8E%AF%E7%9B%B8%E5%85%8B%E4%BB%A4.ydwls1inc3k.webp">
 <meta property="article:published_time" content="2022-04-03T10:23:18.000Z">
-<meta property="article:modified_time" content="2022-04-04T02:50:16.553Z">
+<meta property="article:modified_time" content="2022-04-05T03:22:33.946Z">
 <meta property="article:author" content="飞丶">
 <meta property="article:tag" content="语言学习">
 <meta name="twitter:card" content="summary">
@@ -205,12 +205,12 @@
 <p>定义了一个双精度浮点型常量eps。函数内外都可定义常量。</p>
 <h1 id="第二讲（习题一）"><a href="#第二讲（习题一）" class="headerlink" title="第二讲（习题一）"></a>第二讲（习题一）</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span><span class="comment">//万能头文件</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p>只使用#include<cstdio>代码的运行速度会更快。</p>
+<p>只使用#include&lt; cstdio &gt;代码的运行速度会更快。</p>
 <p>使用万能头文件则等待的时间会更长。</p>
 <p>c++可以编译所有的c代码，但是c不能编译c++的代码。</p>
 <p>如果只使用 printf() 和 scanf() 可以不用加 using namespace std; 语句。</p>
-<p>用cin输入字符串可以使用头文件#include<string>,该头文件存在于#include<iostream>中。</p>
-<p>abs()不需要加额外的头文件，它包含在#include<iostream>中。</p>
+<p>用cin输入字符串可以使用头文件#include&lt; string &gt;,该头文件存在于#include&lt; iostream &gt;中。</p>
+<p>abs()不需要加额外的头文件，它包含在#include&lt; iostream &gt;中。</p>
 <h1 id="第三讲"><a href="#第三讲" class="headerlink" title="第三讲"></a>第三讲</h1><p>使用printf()时，若想在输出的内容右边加一些空格，可以使用 “%-nd\n” ,若想在左边加入空格，可使用 “%nd\n” ,若要补零，则可以使用 “%0nd”。此为固定宽度输出的常用方式。</p>
 <p>若输出为double类型，则可以使用 “%m.nlf”,通过m来固定输出宽度，若要补零，与上述方式类似。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">大于 a &gt; b</span></span><br><span class="line"><span class="comment">小于 a &lt; b</span></span><br><span class="line"><span class="comment">大于等于 a &gt;= b</span></span><br><span class="line"><span class="comment">小于等于 a &lt;= b</span></span><br><span class="line"><span class="comment">等于 a == b</span></span><br><span class="line"><span class="comment">不等于 a != b</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
@@ -235,7 +235,7 @@
 
 <p><strong>运行结果</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2022-03-14-161025.3r927dek94e0.webp" alt="屏幕截图-2022-03-14-161025"></p>
-<h1 id="swap"><a href="#swap" class="headerlink" title="swap()"></a>swap()</h1><p>使用头文件 #include <algorithm> (算法库）可使用交换函数 <strong>swap (x, y)</strong> 将两个数进行交换。</p>
+<h1 id="swap"><a href="#swap" class="headerlink" title="swap()"></a>swap()</h1><p>使用头文件 #include &lt; algorithm &gt; (算法库）可使用交换函数 <strong>swap (x, y)</strong> 将两个数进行交换。</p>
 <p>while () 循环语句有多种写法</p>
 <p>如：</p>
 <p>while (true)</p>
@@ -259,7 +259,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">3</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>&#125;;<span class="comment">//定义了一个长度为三的数组</span></span><br><span class="line"><span class="type">int</span> b[] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>&#125;;<span class="comment">//定义了一个长度为三的数组</span></span><br><span class="line"><span class="type">int</span> c[<span class="number">5</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>&#125;;<span class="comment">//定义了一个长度是5的数组，没有给出的值，默认是0</span></span><br><span class="line"><span class="type">char</span> d[] = &#123;<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>&#125;;<span class="comment">//定义了一个长度是3的数组</span></span><br><span class="line"><span class="type">int</span> f[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;<span class="comment">// 将数组全部初始化成0的写法</span></span><br><span class="line"><span class="comment">//数组下标一定从0开始</span></span><br></pre></td></tr></table></figure>
 
 <p>在函数内部定义的一个很长的数组时一定要注意，很有可能会报错，因为数组的长度过长会超过栈空间，可以将此数组定义为全局变量，即将其定义在函数外。在函数外定义的数组会将其放在堆空间，堆空间没有任何长度限制，但不能超过内存限制。<strong>定义在函数外面的数组变量一定都是0</strong>，而定义在函数内部的变量是随机的，此为<strong>全局变量（堆）与局部变量（栈）的区别。</strong></p>
-<p>翻转函数 <strong>reverse()</strong> 在#include<algorithm>中。</p>
+<p>翻转函数 <strong>reverse()</strong> 在#include&lt; algorithm &gt;中。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">reverse</span>(a, a + n);<span class="comment">//将数组前n段翻转</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>将数组顺时针旋转k次</strong></p>
@@ -273,7 +273,7 @@
 <h2 id="二维数组与多维数组"><a href="#二维数组与多维数组" class="headerlink" title="二维数组与多维数组"></a>二维数组与多维数组</h2><p><strong>二维数组初始化：</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> b[<span class="number">3</span>][<span class="number">4</span>] = &#123;</span><br><span class="line">    &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,</span><br><span class="line">    &#123;<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;.</span><br><span class="line">    &#123;<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>函数**memset(数组名，初始化的值，要初始化数组的长度 * 数组类型的大小（字节）)**可以初始化数组的值，该函数在#include<cstring>中。memset()所有的单位都是字节（1 Byte（字节） &#x3D; 8 bit（位）， 1 KB &#x3D; 1024 Byte， 1 MB &#x3D; 1024 KB, 1 GB &#x3D; 1024 MB, B 为字节，b 为位），int为4个字节。</p>
+<p>函数**memset(数组名，初始化的值，要初始化数组的长度 * 数组类型的大小（字节）)**可以初始化数组的值，该函数在#include&lt; cstring&gt;中。memset()所有的单位都是字节（1 Byte（字节） &#x3D; 8 bit（位）， 1 KB &#x3D; 1024 Byte， 1 MB &#x3D; 1024 KB, 1 GB &#x3D; 1024 MB, B 为字节，b 为位），int为4个字节。</p>
 <p>例如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="number">40</span>);<span class="comment">//定义了长度为十的数组，每一个数组元素的大小为4个字节，要初始化十个元素的值，因此为40，将数组a的全部元素初始化为0.</span></span><br></pre></td></tr></table></figure>
 
@@ -286,7 +286,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="keyword">sizeof</span> a);</span><br></pre></td></tr></table></figure>
 
 <p><strong>与循环初始化相比，memset()初始化的速度会更快。</strong></p>
-<p>若想将一个数组复制在另一个数组中可使用函数<strong>memcpy(复制的目标数组名，原数组的数组名，复制的长度 * 字节数)，它同样在#include<cstring>中。</strong></p>
+<p>若想将一个数组复制在另一个数组中可使用函数<strong>memcpy(复制的目标数组名，原数组的数组名，复制的长度 * 字节数)，它同样在#include&lt; cstring&gt;中。</strong></p>
 <p>如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">memcpy</span>(b, a, <span class="keyword">sizeof</span> a);<span class="comment">//将数组a中的数组元素复制给数组b</span></span><br></pre></td></tr></table></figure>
 
@@ -296,7 +296,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/QQ%E6%88%AA%E5%9B%BE20220321205150.1l1z42kzjaow.webp" alt="QQ截图20220321205150"></p>
 <p><strong>运行结果：</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/QQ%E6%88%AA%E5%9B%BE20220321203953.1f1y15q5jwkg.webp" alt="QQ截图20220321203953"></p>
-<p>min() 与max()分别为求两个数的最小数和最大数。他俩在#include<iostream>中。</p>
+<p>min() 与max()分别为求两个数的最小数和最大数。他俩在#include&lt; iostream&gt;中。</p>
 <p>如：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">min</span>(a, b);<span class="comment">//求a和b中的最小值</span></span><br><span class="line"><span class="built_in">max</span>(a, b);<span class="comment">//求a和b中的最大值</span></span><br></pre></td></tr></table></figure>
 
@@ -329,7 +329,7 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> s[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, s);<span class="comment">//在输入字符串时不需要加取地址符&#x27;&amp;&#x27;，若想读入单个字符，可以使用 &#x27;&amp;s[i]&#x27;</span></span><br><span class="line">cout &lt;&lt; s &lt;&lt;endl;</span><br></pre></td></tr></table></figure>
 
 <p><strong>数组名 &#x3D; 首元素地址</strong></p>
-<h3 id="fgets-与getline"><a href="#fgets-与getline" class="headerlink" title="fgets()与getline()"></a>fgets()与getline()</h3><p><strong>cin与scanf在读入字符串时，遇到空格、回车、文件结束符会结束输入操作，fgets()可以解决这种问题(最新的C++已将gets()函数淘汰，使用时会报错，fgets()在头文件#include<cstdio>中）。</strong></p>
+<h3 id="fgets-与getline"><a href="#fgets-与getline" class="headerlink" title="fgets()与getline()"></a>fgets()与getline()</h3><p><strong>cin与scanf在读入字符串时，遇到空格、回车、文件结束符会结束输入操作，fgets()可以解决这种问题(最新的C++已将gets()函数淘汰，使用时会报错，fgets()在头文件#include&lt; cstdio&gt;中）。</strong></p>
 <p><em>使用fgets()时一定要考虑回车问题。</em></p>
 <p><strong>fgets(字符串名，最多读入字符的数量，读入的文件)；</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fgets</span>(s, <span class="number">100</span>, stdin); <span class="comment">//可以读入包括空格、回车、文件结束符的一行（读入数组），因此当输入带有回车的字符串时，计算出的字符串长度会加一</span></span><br></pre></td></tr></table></figure>
@@ -339,13 +339,13 @@
 <p>若定义的字符串为数组，使用cin输入可使用**cin.getline()**函数。</p>
 <p><strong>cin.getline(字符串名， 最多输入的长度);</strong></p>
 <p><strong>printf(“%s\n”, s)与puts(s);等价（包括换行符）。</strong></p>
-<p>在头文件#include&lt;string.h&gt;或#include<cstring>中：</p>
+<p>在头文件#include&lt;string.h&gt;或#include&lt; cstring&gt;中：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strlen</span>(s);<span class="comment">//求字符串的长度,计算的长度不包含 &#x27;\0&#x27; 字符</span></span><br><span class="line"><span class="built_in">strcmp</span>(s1, s2);<span class="comment">//按照字典序比较两个字符串的大小，若s1 &lt; s2，返回-1，s1 == s2,返回0，若s1 &gt; s2,返回1</span></span><br><span class="line"><span class="built_in">strcpy</span>(s1, s2);<span class="comment">//将s2复制到s1</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>注意：</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(s); i ++ ) cout &lt;&lt; s[i] &lt;&lt; endl;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>, len = <span class="built_in">strlen</span>(s); i &lt; len; i ++ ) cout &lt;&lt; s[i] &lt;&lt; endl;</span><br><span class="line"><span class="comment">//两种写法等价，但两种写法运行速度有变化，第一种写法每执行一次循环都要计算字符串的长度，因此花费不必要的时间，容易超时，而第二种写法只计算了一次字符串长度，运行的时间大大缩短，最好使用第二种写法</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="标准库类型-string"><a href="#标准库类型-string" class="headerlink" title="标准库类型 string"></a>标准库类型 string</h2><h3 id="string定义和初始化"><a href="#string定义和初始化" class="headerlink" title="string定义和初始化"></a>string定义和初始化</h3><p>在使用string类型时，需要引入头文件#include<string></p>
+<h2 id="标准库类型-string"><a href="#标准库类型-string" class="headerlink" title="标准库类型 string"></a>标准库类型 string</h2><h3 id="string定义和初始化"><a href="#string定义和初始化" class="headerlink" title="string定义和初始化"></a>string定义和初始化</h3><p>在使用string类型时，需要引入头文件#include&lt; string&gt;</p>
 <p>string类型的字符串是可变长的字符序列（动态的变化），因此在使用中提供了很大的便利。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string s1;<span class="comment">//默认的空字符串，长度为0</span></span><br><span class="line">string s2 = s1;<span class="comment">//s2是s1的副本（复制操作）</span></span><br><span class="line">string s3 = <span class="string">&quot;hiya&quot;</span>;<span class="comment">//s3是该字符串字面值的一个副本</span></span><br><span class="line"><span class="function">string <span class="title">s4</span><span class="params">(<span class="number">10</span>, <span class="string">&#x27;c&#x27;</span>)</span></span>;<span class="comment">//s4的内容是：cccccccccc</span></span><br></pre></td></tr></table></figure>
 
@@ -391,7 +391,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E5%BE%AA%E7%8E%AF%E7%9B%B8%E5%85%8B%E4%BB%A4.ydwls1inc3k.webp" alt="循环相克令"></p>
 <h2 id="单词替换"><a href="#单词替换" class="headerlink" title="单词替换"></a><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/772/">单词替换</a></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    string s, a, b;</span><br><span class="line">    <span class="built_in">getline</span>(cin, s);</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    <span class="function">stringstream <span class="title">ssin</span><span class="params">(s)</span></span>;<span class="comment">//可以理解为把字符串s按空格拆为一个个的单词</span></span><br><span class="line">    string str;</span><br><span class="line">    <span class="keyword">while</span> (ssin &gt;&gt; str)<span class="comment">//把拆好的单词输入进str中，通过while循环一次比较</span></span><br><span class="line">        <span class="keyword">if</span> (str == a) cout &lt;&lt; b &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    	<span class="keyword">else</span> cout &lt;&lt; str &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="stringstream-名称"><a href="#stringstream-名称" class="headerlink" title="stringstream 名称()"></a>stringstream 名称()</h2><p>stringstream 在#include <sstream>中，stringstream（字符串流）可以把一个字符串初始化一个类似于cin（与cin的功能相同）的一个东西，然后从该字符串当中提取出来任意需要的信息（数据类型转换）。</p>
+<h2 id="stringstream-名称"><a href="#stringstream-名称" class="headerlink" title="stringstream 名称()"></a>stringstream 名称()</h2><p>stringstream 在#include &lt; sstream&gt;中，stringstream（字符串流）可以把一个字符串初始化一个类似于cin（与cin的功能相同）的一个东西，然后从该字符串当中提取出来任意需要的信息（数据类型转换）。</p>
 <p>stringstream ssin(s)，将字符串s通过stringstream初始化为一个字符串流，ssin是一个变量，可以随意定义（相当于名称）。</p>
 <p>ssin与cin的不同点在于ssin是在字符串当中读入信息。 </p>
 <p>使用stringstream读入字符串时，若字符串中含有空格，会将空格过滤，但输出时会将输入前的字符串按照整体输出，例如：</p>
@@ -708,11 +708,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工程学习</a>
+                <a href="javascript:void(0)" class="js-tag color3">CS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CS</a>
+                <a href="javascript:void(0)" class="js-tag color5">工程学习</a>
               </li>
             
             <div class="clearfix"></div>
