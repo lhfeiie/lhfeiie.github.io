@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第一章 计算机网络和因特网1.1 什么是因特网1.1.1 具体构成描述端系统通过通信链路和分组交换机连接到一起。 分组交换机：路由器（通常用于网络核心中）、链路层交换机（通常用于接入网中）。 端系统、分组交换机和其他因特网部件都要运行一系列协议，这些协议控制因特网中信息的接受和发送。TCP和IP是因特网中最为重要的协议。 IP协议定义了在路由器和端系统之间发送和接收的分组格式。因特网的主要协议统称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/02/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第一章 计算机网络和因特网1.1 什么是因特网1.1.1 具体构成描述端系统通过通信链路和分组交换机连接到一起。 分组交换机：路由器（通常用于网络核心中）、链路层交换机（通常用于接入网中）。 端系统、分组交换机和其他因特网部件都要运行一系列协议，这些协议控制因特网中信息的接受和发送。TCP和IP是因特网中最为重要的协议。 IP协议定义了在路由器和端系统之间发送和接收的分组格式。因特网的主要协议统称">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E6%8E%A5%E5%85%A5%E7%BD%91.59bats2rgwg0.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/DSL%E5%9B%A0%E7%89%B9%E7%BD%91%E6%8E%A5%E5%85%A5.57jlej3xx5s0.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E7%BD%91%E7%BB%9C%E6%A0%B8%E5%BF%83.2sxmsvn9z0c0.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E5%AD%98%E5%82%A8%E8%BD%AC%E5%8F%91%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2.6j52cfr3z1w0.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2.2qxupnvoosy0.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C.2bmctp3hbytc.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C%E7%9A%84%E5%A4%8D%E7%94%A8.1je3xlnlgn9c.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/ISP%E7%9A%84%E4%BA%92%E8%81%94.78a59ksyrug0.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lhfeiie/img@main/%E8%8A%82%E7%82%B9%E6%97%B6%E5%BB%B6.1g06tb91b38.webp">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/lhfeiie/img@main/%E5%B9%B3%E5%9D%87%E6%8E%92%E9%98%9F%E6%97%B6%E5%BB%B6%E4%B8%8E%E6%B5%81%E9%87%8F%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB.43lq389uosc0.webp">
+<meta property="article:published_time" content="2023-02-13T10:35:24.807Z">
+<meta property="article:modified_time" content="2022-06-28T13:16:35.976Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fei985/img@main/%E6%8E%A5%E5%85%A5%E7%BD%91.59bats2rgwg0.webp">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-计算机网络" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/02/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="article-date">
+  <time class="dt-published" datetime="2023-02-13T10:35:24.807Z" itemprop="datePublished">2023-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第一章-计算机网络和因特网"><a href="#第一章-计算机网络和因特网" class="headerlink" title="第一章 计算机网络和因特网"></a>第一章 计算机网络和因特网</h1><h2 id="1-1-什么是因特网"><a href="#1-1-什么是因特网" class="headerlink" title="1.1 什么是因特网"></a>1.1 什么是因特网</h2><h3 id="1-1-1-具体构成描述"><a href="#1-1-1-具体构成描述" class="headerlink" title="1.1.1 具体构成描述"></a>1.1.1 具体构成描述</h3><p>端系统通过<strong>通信链路</strong>和<strong>分组交换机</strong>连接到一起。</p>
+<p>分组交换机：路由器（通常用于网络核心中）、链路层交换机（通常用于接入网中）。</p>
+<p>端系统、分组交换机和其他因特网部件都要运行一系列协议，这些协议控制因特网中信息的接受和发送。TCP和IP是因特网中最为重要的协议。</p>
+<p>IP协议定义了在路由器和端系统之间发送和接收的分组格式。因特网的主要协议统称为TCP&#x2F;IP。</p>
+<h3 id="1-1-2-服务描述"><a href="#1-1-2-服务描述" class="headerlink" title="1.1.2 服务描述"></a>1.1.2 服务描述</h3><p>与因特网相连的端系统提供了一个套接字接口，该接口规定了运行在一个端系统上的程序请求因特网基础设施向运行在另一个端系统上的特定目的地程序交付数据的方式。英特网套接字接口是一套发送程序必须遵循的规则集合，因此因特网能够将数据交付给目的地。</p>
+<h3 id="1-1-3-什么是协议"><a href="#1-1-3-什么是协议" class="headerlink" title="1.1.3 什么是协议"></a>1.1.3 什么是协议</h3><p><strong>1. 人类活动的类比</strong></p>
+<p>为了完成一项工作，要求两个（或多个）通信实体运行相同的协议。</p>
+<p><strong>2. 网络协议</strong></p>
+<p><strong>协议</strong> 定义了在两个或多个通信实体之间交换的报文的格式和顺序，以及报文发送和&#x2F;或接受一条报文或其他事件所采取的动作。</p>
+<h2 id="1-2-网络边缘"><a href="#1-2-网络边缘" class="headerlink" title="1.2 网络边缘"></a>1.2 网络边缘</h2><p>端系统处于因特网的边缘。</p>
+<p>主机 &#x3D; 端系统。</p>
+<p>主机分为<strong>客户（通常是桌面PC、移动PC和智能手机等）</strong>和<strong>服务器（通常是更为强大的机器，用于存储和发布Web页面、流视频、中继电子邮件等）</strong>。</p>
+<h3 id="1-2-1-接入网"><a href="#1-2-1-接入网" class="headerlink" title="1.2.1 接入网"></a>1.2.1 接入网</h3><p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E6%8E%A5%E5%85%A5%E7%BD%91.59bats2rgwg0.webp" alt="接入网"></p>
+<p><strong>接入网：</strong>指将端系统物理连接到其<strong>边缘路由器（端系统到任何其他远程端系统的路径上的第一台路由器）</strong>的网络。</p>
+<p>宽带住宅接入有两种最流行的类型：<strong>数字用户线（DSL）</strong>和电缆。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/DSL%E5%9B%A0%E7%89%B9%E7%BD%91%E6%8E%A5%E5%85%A5.57jlej3xx5s0.webp" alt="DSL因特网接入"></p>
+<p><strong>光纤到户（FTTH）</strong>是一种提供更高速率的新兴技术。</p>
+<p>两种有竞争性的光纤分布体系结构：<strong>有源光纤网络（AON）和无源光纤网络（PON）。</strong></p>
+<p><strong>无源光纤网络（PON）</strong>：每个家庭具有一个<strong>光纤网络端接器（ONT）</strong>，它把一些家庭集结到一根共享的光纤，该光纤再连接到本地电话和公司的中心局中的<strong>光纤线路端接器（OLT）</strong>。</p>
+<h3 id="1-2-2-物理媒体"><a href="#1-2-2-物理媒体" class="headerlink" title="1.2.2 物理媒体"></a>1.2.2 物理媒体</h3><p><strong>物理媒体：</strong>两种类型：引导型媒体和非引导型媒体。</p>
+<p>​	<strong>引导型媒体：</strong>电波沿着固体媒体前行。如光缆、双绞铜线或同轴电缆。</p>
+<p>​	<strong>非引导型媒体：</strong>电波在空气或外层空间传播。如在无线局域网或数字卫星频道中。</p>
+<h4 id="双绞铜线"><a href="#双绞铜线" class="headerlink" title="双绞铜线"></a>双绞铜线</h4><p>最便宜且最常用的导引型传输媒体，它一直用于电话网。</p>
+<p><strong>无屏蔽双绞线（UTP）</strong>常用在建筑物内的计算机网络中。</p>
+<h4 id="同轴电缆"><a href="#同轴电缆" class="headerlink" title="同轴电缆"></a>同轴电缆</h4><p>能够达到较高的数据传输速率，在电视系统中相当普遍，它能被用作导引型<strong>共享媒体</strong>。</p>
+<h4 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h4><p>一种细而柔软的、能够导引光脉冲的媒体，每个脉冲表示一个比特。一根光纤能够支持极高的比特速率，它们不受电磁干扰，光缆信号衰减极低，且很难窃听。光纤广泛用于因特网的主干。</p>
+<h4 id="陆地无线电信道"><a href="#陆地无线电信道" class="headerlink" title="陆地无线电信道"></a>陆地无线电信道</h4><p>承载电磁频谱中的信号。它不需要安装物理线路，并且具有穿透墙壁、提供移动用户的连接以及长距离承载信号的能力。其特性极大的依赖于传播环境和信号传输的距离。</p>
+<h4 id="卫星无线电信道"><a href="#卫星无线电信道" class="headerlink" title="卫星无线电信道"></a>卫星无线电信道</h4><p>通信中常使用两类卫星：<strong>同步卫星</strong>和<strong>近地轨道卫星</strong>。</p>
+<h2 id="1-3-网络核心"><a href="#1-3-网络核心" class="headerlink" title="1.3 网络核心"></a>1.3 网络核心</h2><h3 id="1-3-1-分组交换"><a href="#1-3-1-分组交换" class="headerlink" title="1.3.1 分组交换"></a>1.3.1 分组交换</h3><p>在源和目的地之间，每个分组都通过通信链路和分组交换机传送。</p>
+<p>交换机主要有两类：<strong>路由器</strong>和<strong>链路层交换机</strong>。</p>
+<p><strong>1. 存储转发传输</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E7%BD%91%E7%BB%9C%E6%A0%B8%E5%BF%83.2sxmsvn9z0c0.webp" alt="网络核心"></p>
+<p>多数分组交换机在链路的输入端使用存储转发传输机制。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E5%AD%98%E5%82%A8%E8%BD%AC%E5%8F%91%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2.6j52cfr3z1w0.webp" alt="存储转发分组交换"></p>
+<p><strong>2. 排队时延和分组丢失</strong></p>
+<p>分组交换机具有一个<strong>输出缓存</strong>，它产生了转发时延，除此之外，分组还要承受输出缓存的<strong>排队时延</strong>。</p>
+<p>当缓存中的分组完全充满，下一个到达的分组会出现<strong>分组丢失（丢包）</strong>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2.2qxupnvoosy0.webp" alt="分组交换"></p>
+<p><strong>3. 转发表和路由选择协议</strong></p>
+<p>每一个分组包含了一个目的地的IP地址，路由器通过检查其IP地址决定发送哪一个链路。</p>
+<p>每台路由器具有一个<strong>转发表</strong>，路由器扫描到达的分组目的地址并在转发表中查找适合的输出链路，将目的地址映射成为输出链路。</p>
+<p>因特网具有一些特殊的<strong>路由选择协议</strong>，用于自动地设置这些转发表。</p>
+<h3 id="1-3-2-电路交换"><a href="#1-3-2-电路交换" class="headerlink" title="1.3.2 电路交换"></a>1.3.2 电路交换</h3><p>通过网络链路和交换机移动数据有两种基本方法：<strong>电路交换</strong>和<strong>分组交换</strong>。</p>
+<p>在分组交换网络中，资源（缓存，链路传输速率）不是预留的，而在电路交换网络中，预留了端系统间沿路径通信所需要的资源（电路交换相当于在到达餐馆之前向餐馆预定位置，即开辟了一条专属电路）。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C.2bmctp3hbytc.webp" alt="电路交换网络"></p>
+<p><strong>1. 电路交换网络中的复用</strong></p>
+<p>链路中的电路交换是通过<strong>频分复用（FDM）</strong>和<strong>时分复用（TDM）</strong>来实现的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C%E7%9A%84%E5%A4%8D%E7%94%A8.1je3xlnlgn9c.webp" alt="电路交换网络的复用"></p>
+<p><strong>分组交换的性能优于电路交换的性能。</strong></p>
+<h3 id="1-3-3-网络的网络"><a href="#1-3-3-网络的网络" class="headerlink" title="1.3.3 网络的网络"></a>1.3.3 网络的网络</h3><p>网络结构一：所有接入ISP连接独一无二的全球传输ISP。</p>
+<p>网络结构二：接入ISP连接不同的多个全球传输ISP，全球传输ISP之间相互连接。</p>
+<p>网络结构三：接入ISP连接其所在区域ISP，每个区域ISP连接第一层ISP，在这样关系中每一层都是客户-提供商关系（接入ISP可以直接跳过区域ISP与第一层ISP连接）。</p>
+<p><strong>存在点（POP）：</strong>存在于等级结构（网络结构三）的所有层次，底层（接入ISP）等级除外（低等级可以连接高等级中的POP的一台路由器，接入ISP为最底层，没有客户，所以它除外）。</p>
+<p><strong>多宿：</strong>任何ISP（除了第一层ISP）可以选择多宿，即可以与两个或多个提供商ISP连接（指低等级可以同时连接多个高等级ISP，第一层ISP是最高层，所以它除外）。</p>
+<p><strong>对等：</strong>位于相同等级结构层次的邻近一对的ISP。</p>
+<p><strong>因特网交换点（IXP）：</strong>IXP是一个汇合点，多个ISP能够在这里一起对等。</p>
+<p>网络结构四：由接入ISP、区域ISP、第一层ISP、POP、多宿、对等和IXP组成。</p>
+<p>网络结构五：在网络结构四的顶部增加了<strong>内容提供商网络</strong>。如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fei985/img@main/ISP%E7%9A%84%E4%BA%92%E8%81%94.78a59ksyrug0.webp" alt="ISP的互联"></p>
+<h2 id="1-4-分组交换网中的时延、丢包和吞吐量"><a href="#1-4-分组交换网中的时延、丢包和吞吐量" class="headerlink" title="1.4 分组交换网中的时延、丢包和吞吐量"></a>1.4 分组交换网中的时延、丢包和吞吐量</h2><h3 id="1-4-1-分组交换网中的时延概述"><a href="#1-4-1-分组交换网中的时延概述" class="headerlink" title="1.4.1 分组交换网中的时延概述"></a>1.4.1 分组交换网中的时延概述</h3><p><img src="https://cdn.jsdelivr.net/gh/lhfeiie/img@main/%E8%8A%82%E7%82%B9%E6%97%B6%E5%BB%B6.1g06tb91b38.webp" alt="节点时延"></p>
+<p><strong>节点总时延：</strong>节点处理时延、排队时延、传输时延、传播时延。</p>
+<p><strong>处理时延：</strong>检查分组首部和决定将该分组导向何处所需要的时间。</p>
+<p><strong>排队时延：</strong>在队列中，分组在链路上等待传输。若该队列是空的，并且当前没有其他分组正在传输，则该分组的排队时延是0。如果流量很大，并且许多其他分组也在等待传输，该排队时延将很长。</p>
+<p><strong>传输时延：</strong>将所有分组的比特推向链路所需要的时间。</p>
+<p><strong>传播时延：</strong>一旦一个比特被推向链路，该比特需要向下一个路由器传播。从该链路的起点到路由器B传播所需要的时间是传播时延。该比特以该链路的传播速率传播。</p>
+<p><strong>传输时延和传播时延的比较：</strong> <strong>传输时延</strong>是路由器推出分组所需要的时间，它是分组长度和链路传输速率的函数，与两台路由器之间的距离无关。<strong>传播时延</strong>是一个比特从一台路由器传播到另一台路由器所需要的时间，它是两台路由器之间距离的函数，与分组长度或链路传输速率无关。</p>
+<h3 id="1-4-2-排队时延和丢包"><a href="#1-4-2-排队时延和丢包" class="headerlink" title="1.4.2 排队时延和丢包"></a>1.4.2 排队时延和丢包</h3><p><strong>流量强度：</strong>在估计排队时延的范围方面经常起着重要的作用。<strong>设计系统时流量强度不能大于1。</strong> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lhfeiie/img@main/%E5%B9%B3%E5%9D%87%E6%8E%92%E9%98%9F%E6%97%B6%E5%BB%B6%E4%B8%8E%E6%B5%81%E9%87%8F%E5%BC%BA%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB.43lq389uosc0.webp" alt="平均排队时延与流量强度的关系"></p>
+<p><strong>丢包</strong></p>
+<p>随着流量强度接近1，排队时延并不真正趋向无穷大。相反，到达的分组将发现一个满的队列。由于没有地方存储这个分组，路由器将<strong>丢弃</strong>该分组，即该分组将会<strong>丢失</strong>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-id="cle2okdma000cxwvtbcccapsx" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/02/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/02/13/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%A6%82%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/02/13/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/13/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%A6%82%E8%BF%B0/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
