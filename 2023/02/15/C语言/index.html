@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"flipXIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="第五章 函数一、函数的定义1.函数首部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言">
+<meta property="og:url" content="http://example.com/2023/02/15/C%E8%AF%AD%E8%A8%80/index.html">
+<meta property="og:site_name" content="Lee&#39;s Blog">
+<meta property="og:description" content="第五章 函数一、函数的定义1.函数首部">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-15T06:24:51.000Z">
+<meta property="article:modified_time" content="2023-02-16T11:08:52.742Z">
+<meta property="article:author" content="Lee">
+<meta property="article:tag" content="导航">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/02/15/C%E8%AF%AD%E8%A8%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>C语言 | Lee's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Lee's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Dreams will be true!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/15/C%E8%AF%AD%E8%A8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202106%2F13%2F20210613235426_7a793.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1678977005&t=93fbeaf5703aa746a965441eda08d9d0">
+      <meta itemprop="name" content="Lee">
+      <meta itemprop="description" content="欢迎来到我的个人网站">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lee's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-15 14:24:51" itemprop="dateCreated datePublished" datetime="2023-02-15T14:24:51+08:00">2023-02-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-02-16 19:08:52" itemprop="dateModified" datetime="2023-02-16T19:08:52+08:00">2023-02-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">语法学习</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="第五章-函数"><a href="#第五章-函数" class="headerlink" title="第五章 函数"></a>第五章 函数</h1><h2 id="一、函数的定义"><a href="#一、函数的定义" class="headerlink" title="一、函数的定义"></a>一、函数的定义</h2><h3 id="1-函数首部"><a href="#1-函数首部" class="headerlink" title="1.函数首部"></a>1.函数首部</h3><p>函数首部后面不能加分号，它和函数体一起构成完整的函数定义，<strong>但在函数定义时要加分号</strong>。</p>
+<p>如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> <span class="title function_">cylinder</span><span class="params">(<span class="type">double</span> r,<span class="type">double</span> h)</span></span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>形参表不能写成 double r, h。</p>
+<h2 id="二、不返回结果的函数"><a href="#二、不返回结果的函数" class="headerlink" title="二、不返回结果的函数"></a>二、不返回结果的函数</h2><p>在不返回结果的函数定义中，void不能省略；否则，函数类型被默认定义为int。</p>
+<p>不返回结果的函数定义：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
+<p>返回结果的函数定义：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、局部变量和全局变量"><a href="#三、局部变量和全局变量" class="headerlink" title="三、局部变量和全局变量"></a>三、局部变量和全局变量</h2><h3 id="1-局部变量"><a href="#1-局部变量" class="headerlink" title="1.局部变量"></a>1.局部变量</h3><p>局部变量一般定义在函数或复合语句的开始处，标准C规定其不能定义在中间位置。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> a=<span class="number">1</span>;      <span class="comment">//主函数的局部变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-全局变量"><a href="#2-全局变量" class="headerlink" title="2.全局变量"></a>2.全局变量</h3><p>全局变量的定义格式与局部变量完全一致，只是定义位置不在函数内，它可以定义在程序的头部，也可以定义在两函数的中间或程序尾部，只要在<strong>函数外部</strong>即可。</p>
+<p><strong>一般情况下把全局变量定义在程序的最前面，即第一个函数的前面。</strong></p>
+<p>当某函数的局部变量与全局变量同名时，在该函数中全局变量不起作用，而局部变量起作用。同样，当函数局部变量与复合语句的局部变量同名时，以复合语句为准。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> x;      <span class="comment">//定义全局变量</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">f</span><span class="params">()</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line">    x=a;     <span class="comment">//对全局变量x赋值1</span></span><br><span class="line">    a=f();   <span class="comment">//a的值为4</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> b=<span class="number">2</span>;</span><br><span class="line">        b=a+b;     <span class="comment">//b的值为6</span></span><br><span class="line">        x=x+b;     <span class="comment">//全局变量运算</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>,a,x);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">f</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> x=<span class="number">4</span>;      <span class="comment">//x为局部变量，在本函数中，全局变量x不起作用</span></span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四、变量生存周期和静态局部变量"><a href="#四、变量生存周期和静态局部变量" class="headerlink" title="四、变量生存周期和静态局部变量"></a>四、变量生存周期和静态局部变量</h2><h3 id="1-变量生存周期"><a href="#1-变量生存周期" class="headerlink" title="1.变量生存周期"></a>1.变量生存周期</h3><p>变量从定义开始分配存储单元，到运行结束存储单元被回收，整个过程称为变量生存周期。</p>
+<p>变量的作用范围和生存周期是两个不同概念。</p>
+<p>自动变量定义形式：</p>
+<p>​        auto 类型名 变量表;</p>
+<p>auto可省略。</p>
+<h3 id="2-静态变量——静态局部变量"><a href="#2-静态变量——静态局部变量" class="headerlink" title="2.静态变量——静态局部变量"></a>2.静态变量——静态局部变量</h3><p>静态局部变量的生存周期会持续到程序结束，一旦含有静态局部变量的函数被再次调用，则静态局部变量会被重新激活，上一次函数调用后的值仍然保存着，可供本次调用继续使用。</p>
+<p>静态变量定义格式：</p>
+<p>​       static 类型名 变量表</p>
+<p>就静态变量而言，如果定义时没有赋初值，系统将自动赋0。并且赋初值只在函数第一次调用时起作用，以后调用都按前一次调用保留的值使用。</p>
+<p><strong>静态变量赋初值只在函数第一次调用时起作用，若没有赋初值，系统将自动赋0。</strong></p>
+<h1 id="第六章-回顾数据类型和表达式"><a href="#第六章-回顾数据类型和表达式" class="headerlink" title="第六章 回顾数据类型和表达式"></a>第六章 回顾数据类型和表达式</h1><h2 id="一、数据的存储"><a href="#一、数据的存储" class="headerlink" title="一、数据的存储"></a>一、数据的存储</h2><h3 id="1-整型数据的存储"><a href="#1-整型数据的存储" class="headerlink" title="1.整型数据的存储"></a>1.整型数据的存储</h3><p>为了便于计算机内的运算，一般以补码表示数值。<strong>正数</strong>的原码、反码和补码相同即符号位是0，其余各位表示数值。</p>
+<p>负数的原码、反码和补码不同：</p>
+<p>（1）原码：符号位是1，其余各位表示数值的绝对值。</p>
+<p>（2）反码：符号位是1，其余各位对原码取反。</p>
+<p>（3）补码：反码加1.</p>
+<p>例如（以15位为例）：</p>
+<p>-1的原码是：1 0 0 0 0 0 0 0 . 0 0 0 0 0 0 0 1</p>
+<p>-1的反码：1 1 1 1 1 1 1 1 . 1 1 1 1 1 1 1 0</p>
+<p>-1的补码：1 1 1 1 1 1 1 1 . 1 1 1 1 1 1 1 1</p>
+<h2 id="二、基本数据类型"><a href="#二、基本数据类型" class="headerlink" title="二、基本数据类型"></a>二、基本数据类型</h2><h3 id="1-整型与整型常量"><a href="#1-整型与整型常量" class="headerlink" title="1.整型与整型常量"></a>1.整型与整型常量</h3><p>（1）整型</p>
+<p>（2）整型常量</p>
+<p>a.整数的表示</p>
+<p>十进制整数由正、负号和阿拉伯数字<strong>0-9</strong>组成，<strong>但首位数字不能是0</strong>。八进制整数由正、负号和阿拉伯数字<strong>0-7</strong>组成，<strong>首位数字必须是0</strong>。十六进制整数由正、负号和阿拉伯数字<strong>0-9</strong>、英文字符<strong>a-f</strong>或<strong>A-F</strong>组成，<strong>首位数字前必须有前缀0x或0X</strong>。</p>
+<p>b.整数的类型</p>
+<p>判断整数的类型，首先根据整数后的字母后缀。后缀l或L表示long型常量，如-12L，01 234 567 890L；后缀u或U表示unsigned型常量，如-12u，034u，0x2fdU；后缀l和u或L和U表示unsigned long型常量，如4 294 967 295LU。</p>
+<p>如果整数后面没有出现字母，就根据整型常量的值确定它的类型。</p>
+<p><strong>short型：-32 768-32 767；</strong></p>
+<p><strong>unsigned short型：32 768-65 535；</strong></p>
+<p><strong>int或long型：-2 147 483 648-2 147 483 647；</strong></p>
+<p><strong>unsigned或unsigned long型：2 147 483 648-4 294 967 295；</strong></p>
+<h3 id="2-字符型与字符型常量"><a href="#2-字符型与字符型常量" class="headerlink" title="2.字符型与字符型常量"></a>2.字符型与字符型常量</h3><p>（1）字符型</p>
+<p>每个字符型数据在内存中占用一个字节，用于存储它的ASCII码。ch=’A’和ch=65等价。</p>
+<p><strong>互换整型变量和字符型变量的定义和值时，整型数据的取值范围是有效的ASCII码。</strong></p>
+<p>（2）字符型常量</p>
+<p>字符型常量指单个字符，用一对单引号及其所括起来的字符来表示。如’a’、’X’、’?’、’ ‘（空格符）等都是字符型常量。</p>
+<p><strong>‘a’和’A’是不同的字符型常量，’0’和0是不同类型的常量，前者是字符型常量，而后者是整型变量。</strong></p>
+<h2 id="三、实型数据的输入和输出"><a href="#三、实型数据的输入和输出" class="headerlink" title="三、实型数据的输入和输出"></a>三、实型数据的输入和输出</h2><p><strong>double型数据的输入格式控制说明必须用%lf或%le。</strong></p>
+<h2 id="四、字符型数据的输入和输出"><a href="#四、字符型数据的输入和输出" class="headerlink" title="四、字符型数据的输入和输出"></a>四、字符型数据的输入和输出</h2><p><strong>getchar（）函数和putchar（）函数只能处理单个字符的输入和输出。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%c%c%c&quot;</span>,&amp;ch1,&amp;ch2,&amp;ch3);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%c%c%c%c%c&quot;</span>,ch1,<span class="string">&#x27;#&#x27;</span>,ch2,<span class="string">&#x27;#&#x27;</span>,ch3);</span><br></pre></td></tr></table></figure>
+<p>运行结果</p>
+<p>A bC</p>
+<p>A# #b</p>
+<p><strong>空格也属于字符</strong></p>
+<p><strong>与字符常量在程序中的表示不同，输入输出字符时，字符两侧没有单引号。</strong></p>
+<h2 id="五、自动类型转换"><a href="#五、自动类型转换" class="headerlink" title="五、自动类型转换"></a>五、自动类型转换</h2><h1 id="第十一章-指针进阶"><a href="#第十一章-指针进阶" class="headerlink" title="第十一章 指针进阶"></a>第十一章 指针进阶</h1><h2 id="一、指针数组的概念"><a href="#一、指针数组的概念" class="headerlink" title="一、指针数组的概念"></a>一、指针数组的概念</h2><p>一维指针数组定义的一般格式为：</p>
+<p>类型名 *数组名 [数组长度];</p>
+<p>如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *color [<span class="number">5</span>];</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	<span class="type">const</span> <span class="type">char</span>* color[<span class="number">5</span>] = &#123; <span class="string">&quot;red&quot;</span>,<span class="string">&quot;blue&quot;</span>,<span class="string">&quot;yellow&quot;</span>,<span class="string">&quot;black&quot;</span>,<span class="string">&quot;white&quot;</span> &#125;;</span><br><span class="line">	<span class="type">char</span> str[<span class="number">20</span>];</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Input a color:&quot;</span>);</span><br><span class="line">	scanf_s(<span class="string">&quot;%s&quot;</span>, str);</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">strcmp</span>(str, color[i]) == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (i &lt; <span class="number">5</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Position:%d\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;Not Found\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>将color[0]与color[4]交换所指向的单元：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *tmp;</span><br><span class="line">tmp=color[<span class="number">0</span>];</span><br><span class="line">color[<span class="number">0</span>]=color[<span class="number">4</span>];</span><br><span class="line">color[<span class="number">4</span>]=tmp;</span><br></pre></td></tr></table></figure>
+<p><strong>对指针数组元素的操作与对同类型指针变量的操作相同。</strong></p>
+<h2 id="二、指向指针的指针"><a href="#二、指向指针的指针" class="headerlink" title="二、指向指针的指针"></a>二、指向指针的指针</h2><h3 id="1-指向指针的指针概念"><a href="#1-指向指针的指针概念" class="headerlink" title="1.指向指针的指针概念"></a>1.指向指针的指针概念</h3><p>指向指针的指针一般定义为：</p>
+<p>类型名 <em> </em>变量名;</p>
+<p>也称为二级指针。与一级指针相比，二级指针的概念较难理解，运算也更为复杂。</p>
+<h3 id="2-二级指针操作"><a href="#2-二级指针操作" class="headerlink" title="2.二级指针操作"></a>2.二级指针操作</h3><p>见书P267。</p>
+<p>通过指针地址的指向（ppa-&gt;pa-&gt;a）的变化和指针的值的等价（<em>*ppa, </em>pa, a等价）来判断所定义的指针的值。</p>
+<p>如：</p>
+<p>交换二级指针a和b，ppa指向pb，ppb指向pa，得到：ppa-&gt;pb-&gt;b,<em>*ppa, </em>pb, b等价。</p>
+<p>​                                            ppb-&gt;pa-&gt;a,<em>*ppb, </em>pa, a等价。</p>
+<p>继续执行交换一级指针a和b，pa指向b，pb指向a，得到：ppa-&gt;pb-&gt;a,<em>*ppa, </em>pb, a等价。</p>
+<p>​                                                          ppb-&gt;pa-&gt;b,<em>*ppb, </em>pa, b等价。</p>
+<p>执行交换a与b的值时，由于没有改变指针的值，所以等级关系没有改变，只将a与b的值交换即可。 </p>
+<h3 id="3-二维数组的指针形式"><a href="#3-二维数组的指针形式" class="headerlink" title="3.二维数组的指针形式"></a>3.二维数组的指针形式</h3><p>二维数组是数组元素为一维数组的一维数组。</p>
+<p>假如有如下定义：</p>
+<p>int a[3] [4];</p>
+<p>可以把二维数组a看成是由a[0],a[1],a[2]组成的一维数组，而a[0],a[1],a[2]各自又是一个一维数组。</p>
+<p>数组名a是a[0]的地址，即&amp;a[0]（a即&amp;a[0]）,而a[0]即&amp;a[0] [0],&amp;a[0]与&amp;&amp;a[0] [0]等价。</p>
+<p>二维数组名a是一个二级指针，a[0]是一级指针。</p>
+<p><strong>a+1是第一行的地址， <em>(a+1)是第一行首元素的地址， </em> * (a+1)是第一行首元素的值。</strong></p>
+<p>二维数组中的指针等价关系表见书P268。</p>
+<h2 id="三、用指针数组处理多个字符串"><a href="#三、用指针数组处理多个字符串" class="headerlink" title="三、用指针数组处理多个字符串"></a>三、用指针数组处理多个字符串</h2><h3 id="1-指针数组与二维数组"><a href="#1-指针数组与二维数组" class="headerlink" title="1.指针数组与二维数组"></a>1.指针数组与二维数组</h3><p>指针数组是数组，用来存放指针。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//整型数组</span></span><br><span class="line"><span class="type">char</span> ch[<span class="number">5</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//字符数组</span></span><br><span class="line"><span class="type">int</span>* parr[<span class="number">4</span>];<span class="comment">//存放整型指针的数组 - 指针数组</span></span><br><span class="line"><span class="type">char</span>* pch[<span class="number">5</span>];<span class="comment">//存放字符指针的数组 - 指针数组</span></span><br></pre></td></tr></table></figure>
+<p>数组指针是指向数组的指针，它是一个指针，存放数组的地址。 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="comment">//arr - 首元素地址</span></span><br><span class="line"><span class="comment">//&amp;arr[0] - 首元素地址</span></span><br><span class="line"><span class="comment">//&amp;arr - 数组的地址</span></span><br><span class="line"><span class="type">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>&#125;;</span><br><span class="line"><span class="type">int</span> (*p)[<span class="number">10</span>] = &amp;arr;<span class="comment">//数组的地址要存起来</span></span><br><span class="line"><span class="comment">//上面的p就是数组指针</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* p[<span class="number">0</span>];<span class="comment">//指针数组</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> (*p)[<span class="number">0</span>];<span class="comment">//数组指针</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//两者的区别在于括号的优先级</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>* arr[<span class="number">5</span>];</span><br><span class="line"><span class="type">char</span>* (*pa)[<span class="number">5</span>] = &amp;arr;</span><br><span class="line"><span class="comment">//(*pa)说明pa是一个指针，[5]说明pa指向的数组是5个元素</span></span><br><span class="line"><span class="comment">//char*说明pa指向的数组的元素类型是char*</span></span><br></pre></td></tr></table></figure>
+<p><strong>&amp;数组名表示数组的地址，而数组名表示该数组中首元素的地址。</strong></p>
+<p>定义二维字符数组时必须指定列长度，该长度要大于最长的字符串的有效长度。</p>
+<h3 id="2-用指针数组操作多个字符串-补充冒泡排序"><a href="#2-用指针数组操作多个字符串-补充冒泡排序" class="headerlink" title="2.用指针数组操作多个字符串(补充冒泡排序)"></a>2.用指针数组操作多个字符串(补充冒泡排序)</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">bubble</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;n;i++)<span class="comment">//循环的总次数(n-1次)</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;n-i;j++)<span class="comment">//将最大数放在数组的最后一位，且不                                 再与该最大数作比较，所以为j&lt;n-i.</span></span><br><span class="line">            <span class="keyword">if</span>(a[j]&gt;a[j+<span class="number">1</span>])&#123;</span><br><span class="line">                t=a[j];</span><br><span class="line">                a[j]=a[j+<span class="number">1</span>];</span><br><span class="line">                a[j+<span class="number">1</span>]=t;</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Lee 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Lee 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+	<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------已经到底啦！<i class="fa fa-paw"></i>-------------</div>
+    
+</div>
+
+  
+</div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AF%BC%E8%88%AA/" rel="tag"># 导航</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/02/15/C++%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE/" rel="prev" title="C++语法基础课">
+      <i class="fa fa-chevron-left"></i> C++语法基础课
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/02/15/Django%E6%A1%86%E6%9E%B6%E8%AF%BE/" rel="next" title="Django框架课">
+      Django框架课 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">第五章 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">一、函数的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%87%BD%E6%95%B0%E9%A6%96%E9%83%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.函数首部</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%B8%8D%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.</span> <span class="nav-text">二、不返回结果的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">三、局部变量和全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.局部变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.全局变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%8F%98%E9%87%8F%E7%94%9F%E5%AD%98%E5%91%A8%E6%9C%9F%E5%92%8C%E9%9D%99%E6%80%81%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">1.4.</span> <span class="nav-text">四、变量生存周期和静态局部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8F%98%E9%87%8F%E7%94%9F%E5%AD%98%E5%91%A8%E6%9C%9F"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.变量生存周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E2%80%94%E2%80%94%E9%9D%99%E6%80%81%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.静态变量——静态局部变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%9B%9E%E9%A1%BE%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">第六章 回顾数据类型和表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8"><span class="nav-number">2.1.</span> <span class="nav-text">一、数据的存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B4%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.整型数据的存储</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">二、基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B4%E5%9E%8B%E4%B8%8E%E6%95%B4%E5%9E%8B%E5%B8%B8%E9%87%8F"><span class="nav-number">2.2.1.</span> <span class="nav-text">1.整型与整型常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E5%9E%8B%E4%B8%8E%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%B8%B8%E9%87%8F"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.字符型与字符型常量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-number">2.3.</span> <span class="nav-text">三、实型数据的输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%AD%97%E7%AC%A6%E5%9E%8B%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-number">2.4.</span> <span class="nav-text">四、字符型数据的输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.5.</span> <span class="nav-text">五、自动类型转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E6%8C%87%E9%92%88%E8%BF%9B%E9%98%B6"><span class="nav-number">3.</span> <span class="nav-text">第十一章 指针进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">3.1.</span> <span class="nav-text">一、指针数组的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%8C%87%E5%90%91%E6%8C%87%E9%92%88%E7%9A%84%E6%8C%87%E9%92%88"><span class="nav-number">3.2.</span> <span class="nav-text">二、指向指针的指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%87%E5%90%91%E6%8C%87%E9%92%88%E7%9A%84%E6%8C%87%E9%92%88%E6%A6%82%E5%BF%B5"><span class="nav-number">3.2.1.</span> <span class="nav-text">1.指向指针的指针概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BA%8C%E7%BA%A7%E6%8C%87%E9%92%88%E6%93%8D%E4%BD%9C"><span class="nav-number">3.2.2.</span> <span class="nav-text">2.二级指针操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E6%8C%87%E9%92%88%E5%BD%A2%E5%BC%8F"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.二维数组的指针形式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%94%A8%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E5%A4%84%E7%90%86%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">3.3.</span> <span class="nav-text">三、用指针数组处理多个字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E4%B8%8E%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="nav-number">3.3.1.</span> <span class="nav-text">1.指针数组与二维数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%94%A8%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2-%E8%A1%A5%E5%85%85%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="nav-number">3.3.2.</span> <span class="nav-text">2.用指针数组操作多个字符串(补充冒泡排序)</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Lee"
+      src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202106%2F13%2F20210613235426_7a793.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1678977005&t=93fbeaf5703aa746a965441eda08d9d0">
+  <p class="site-author-name" itemprop="name">Lee</p>
+  <div class="site-description" itemprop="description">欢迎来到我的个人网站</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lhfeiie" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lhfeiie" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/7480862276" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7480862276" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/m0_60076931?spm=1018.2226.3001.5343" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;m0_60076931?spm&#x3D;1018.2226.3001.5343" rel="noopener" target="_blank"><i class="fa fa-crosshairs fa-fw"></i>CSDN</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.acwing.com/user/myspace/index/120932/" title="acwing → https:&#x2F;&#x2F;www.acwing.com&#x2F;user&#x2F;myspace&#x2F;index&#x2F;120932&#x2F;" rel="noopener" target="_blank"><i class="fa a fa-fw"></i>acwing</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://leetcode.cn/u/dudhdh/" title="leetcode → https:&#x2F;&#x2F;leetcode.cn&#x2F;u&#x2F;dudhdh&#x2F;" rel="noopener" target="_blank"><i class="fa leetcode fa-fw"></i>leetcode</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lee</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">124k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:53</span>
+</div>
+
+<!-- <br /> -->
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<!-- <span id="times">载入时分秒...</span> -->
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("11/17/2022 8:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); 
+        if(String(snum).length ==1 ){snum = "0" + snum;}
+        // var times = document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+
+</body>
+</html>
+
+
